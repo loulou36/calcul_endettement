@@ -1,21 +1,28 @@
 package revenue;
 
-public class revenue {
+public class Revenue {
 	public int monthly_revenue;
-	public float ratio;
+	public double ratio;
 	
 	
-	public revenue(int monthly_revenue,float ratio) {
+	public Revenue(int monthly_revenue,double ratio) {
 		super();
 		this.monthly_revenue=monthly_revenue;
 		this.ratio=ratio;
 		
 	}
-	public revenue(int monthly_revenue) {
+	public Revenue(int monthly_revenue) {
 		super();
 		this.monthly_revenue=monthly_revenue;
 		this.ratio=1;
 		
+	}
+	
+	public int effective_revenue() {
+		double result=0;
+		result=this.monthly_revenue*this.ratio;
+		
+		return (int) (result);
 	}
 
 }
