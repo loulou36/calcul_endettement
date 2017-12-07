@@ -6,13 +6,13 @@ public class revenue {
 	
 	
 	public revenue(int monthly_revenue,float ratio) {
-		// TODO Auto-generated constructor stub
+		super();
 		this.monthly_revenue=monthly_revenue;
 		this.ratio=ratio;
 		
 	}
 	public revenue(int monthly_revenue) {
-		// TODO Auto-generated constructor stub
+		super();
 		this.monthly_revenue=monthly_revenue;
 		this.ratio=1;
 		

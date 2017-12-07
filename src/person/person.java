@@ -26,18 +26,18 @@ public class person {
 		return result;
 	}
 	
-	public double expenses_monthly() {
-		double result = 0;
+	public int expenses_monthly() {
+		int result = 0;
 		for (int i = 0; i<expenses.size();i++)
 		{
-			result= result + expenses.get(i).monthly_expense;
+			result= result + expenses.get(i).monthly_expense * ((expenses.get(i).appliable_after_mortgage) ? 1 : 0);
 		}
 		return result;
 	}
 	
 	public float debt_ratio() {
 		float ratio = 0;
-		
+		ratio = this.expenses_monthly()/this.revenues_monthly();
 		return ratio;
 	}
 	
